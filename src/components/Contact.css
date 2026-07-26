@@ -1,0 +1,102 @@
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.contact-left {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 56px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+.contact-phone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-serif);
+  font-size: 40px;
+  color: var(--color-primary);
+  margin-bottom: 48px;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.contact-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.timings-card {
+  background: white;
+  padding: 48px;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  width: 100%;
+  max-width: 500px;
+}
+
+.timings-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  color: var(--color-text-muted);
+}
+
+.timings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.timings-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.timings-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.timings-list span {
+  color: var(--color-text-muted);
+  font-size: 15px;
+}
+
+.timings-list strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+@media (max-width: 992px) {
+  .contact {
+    flex-direction: column;
+  }
+  
+  .contact-left, .contact-right {
+    width: 100%;
+  }
+  
+  .contact-right {
+    justify-content: flex-start;
+  }
+  
+  .timings-card {
+    max-width: 100%;
+  }
+}
