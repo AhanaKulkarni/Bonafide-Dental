@@ -3,6 +3,7 @@
   align-items: center;
   gap: 64px;
   min-height: 85vh;
+  padding-top: 180px; /* offset for fixed header */
 }
 
 .hero-content {
