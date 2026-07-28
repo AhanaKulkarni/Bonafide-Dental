@@ -14,6 +14,16 @@ const Contact = () => {
           </svg>
           <span>+91 8097445755</span>
         </div>
+
+        <div className="contact-phone" style={{ marginTop: '24px', alignItems: 'flex-start' }}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginTop: '4px', flexShrink: 0 }}>
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span style={{ lineHeight: '1.6', fontSize: '18px' }}>
+            G-7, Jay Guru Krupa CHS, Near Don Bosco School, Vimal Dairy Road, Kashinagar, Bhayandar East, Thane
+          </span>
+        </div>
         
         <div className="contact-actions">
           <button className="btn btn-primary">

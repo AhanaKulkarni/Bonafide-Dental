@@ -23,8 +23,8 @@ const Services = () => {
     <div className="services-wrapper" id="services">
       <section className="services container section">
         <div className="services-header">
-          <h4 className="section-label">SERVICES</h4>
-          <h2 className="services-title">Care for every smile.</h2>
+          <h2 className="services-title">SERVICES</h2>
+          <h4 className="section-label" style={{marginTop: '16px', fontSize: '20px', textTransform: 'none'}}>Care for every smile.</h4>
         </div>
         
         <div className="services-grid">

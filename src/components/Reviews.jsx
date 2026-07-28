@@ -4,16 +4,16 @@ import './Reviews.css';
 const Reviews = () => {
   const reviews = [
     {
-      text: "\"Genuinely painless. The calmest dental visit I've had.\"",
-      author: "Ananya S."
+      text: "\"Dr. Dimple is very professional and gentle. Got my root canal done completely painlessly.\"",
+      author: "Rahul M."
     },
     {
-      text: "\"My veneers look completely natural. Just happier.\"",
-      author: "Rohan K."
+      text: "\"Excellent clinic with all modern facilities. The staff is polite and Dr. Dimple explains everything clearly.\"",
+      author: "Sneha P."
     },
     {
-      text: "\"Unbelievably gentle with my six-year-old.\"",
-      author: "Priya M."
+      text: "\"Best dental experience I've had in Mumbai. Clean environment and highly experienced doctor.\"",
+      author: "Vikram S."
     }
   ];
 
@@ -41,13 +41,9 @@ const Reviews = () => {
       </div>
       
       <div className="reviews-cta">
-        <button className="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          Chat on WhatsApp
-        </button>
-        <p className="cta-subtext">Or book an appointment below.</p>
+        <a href="#book" className="btn btn-primary">
+          Book an Appointment
+        </a>
       </div>
     </section>
   );
