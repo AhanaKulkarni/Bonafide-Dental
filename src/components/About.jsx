@@ -35,6 +35,9 @@ const About = () => {
         <p className="about-desc">
           Modern dentistry delivered with warmth, precision, and calm.
         </p>
+        <p className="about-desc" style={{ marginTop: '-8px', fontWeight: '500', color: 'var(--color-primary)' }}>
+          All treatment under one roof.
+        </p>
         
         <div className="features-grid">
           {features.map((feature, index) => (
