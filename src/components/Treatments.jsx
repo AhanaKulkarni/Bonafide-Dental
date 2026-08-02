@@ -6,7 +6,8 @@ const Treatments = () => {
   const treatments = [
     { title: 'Smile Design & Restorations', before: '/slider_1_before.jpg', after: '/slider_1_after.jpg' },
     { title: 'Teeth Whitening & Aesthetics', before: '/slider_2_before.jpg', after: '/slider_2_after.jpg' },
-    { title: 'Gum Health & Full Mouth Rehab', before: '/slider_3_before.jpg', after: '/slider_3_after.jpg' }
+    { title: 'Gum Health & Full Mouth Rehab', before: '/slider_3_before.jpg', after: '/slider_3_after.jpg' },
+    { title: 'Advanced Dental Care', before: '/slider_4_before.jpg', after: '/slider_4_after.jpg' }
   ];
 
   return (

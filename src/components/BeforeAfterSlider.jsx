@@ -11,14 +11,14 @@ const BeforeAfterSlider = ({ beforeImage, afterImage }) => {
   return (
     <div className="ba-slider-container">
       <div className="ba-images">
-        {/* Background is the before image */}
-        <img src={beforeImage} alt="Before" className="ba-image ba-image-before" />
+        {/* Background is the after image */}
+        <img src={afterImage} alt="After" className="ba-image ba-image-after" />
         
-        {/* Foreground is the after image, clipped */}
+        {/* Foreground is the before image, clipped */}
         <img 
-          src={afterImage} 
-          alt="After" 
-          className="ba-image ba-image-after"
+          src={beforeImage} 
+          alt="Before" 
+          className="ba-image ba-image-before"
           style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` }}
         />
         
