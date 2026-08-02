@@ -12,64 +12,46 @@
   margin-top: 8px;
 }
 
-.treatments-grid {
+.treatments-slider-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
-.treatment-card {
+.treatment-slider-card {
   background: white;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   border: 1px solid var(--color-border);
-  transition: all 0.3s ease;
 }
 
-.treatment-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: transparent;
-}
-
-.treatment-image-wrapper {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
-
-.treatment-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.treatment-card:hover .treatment-image {
-  transform: scale(1.05);
-}
-
-.treatment-content {
+.treatment-slider-card .treatment-content {
   padding: 24px;
   text-align: center;
 }
 
-.treatment-content h3 {
-  font-size: 20px;
+.treatment-slider-card h3 {
+  font-size: 22px;
   font-family: var(--font-serif);
   color: var(--color-text);
+  margin: 0 0 8px 0;
+}
+
+.treatment-slider-card p {
+  color: var(--color-text-light);
+  font-size: 14px;
   margin: 0;
 }
 
 @media (max-width: 1024px) {
-  .treatments-grid {
+  .treatments-slider-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 640px) {
-  .treatments-grid {
+@media (max-width: 768px) {
+  .treatments-slider-grid {
     grid-template-columns: 1fr;
   }
   .treatments-title {

@@ -1,12 +1,12 @@
 import React from 'react';
 import './Treatments.css';
+import BeforeAfterSlider from './BeforeAfterSlider';
 
 const Treatments = () => {
   const treatments = [
-    { title: 'Root Canal Treatment', img: '/treatment_root_canal.jpg' },
-    { title: 'Invisalign & Braces', img: '/treatment_braces.jpg' },
-    { title: 'Teeth Whitening', img: '/treatment_whitening.jpg' },
-    { title: 'Dental Implants', img: '/treatment_implants.jpg' }
+    { title: 'Smile Design & Restorations', before: '/slider_1_before.jpg', after: '/slider_1_after.jpg' },
+    { title: 'Teeth Whitening & Aesthetics', before: '/slider_2_before.jpg', after: '/slider_2_after.jpg' },
+    { title: 'Gum Health & Full Mouth Rehab', before: '/slider_3_before.jpg', after: '/slider_3_after.jpg' }
   ];
 
   return (
@@ -17,14 +17,13 @@ const Treatments = () => {
           <h2 className="treatments-title">Transforming smiles.</h2>
         </div>
         
-        <div className="treatments-grid">
+        <div className="treatments-slider-grid">
           {treatments.map((t, index) => (
-            <div className="treatment-card" key={index}>
-              <div className="treatment-image-wrapper">
-                <img src={t.img} alt={t.title} className="treatment-image" />
-              </div>
+            <div className="treatment-slider-card" key={index}>
+              <BeforeAfterSlider beforeImage={t.before} afterImage={t.after} />
               <div className="treatment-content">
                 <h3>{t.title}</h3>
+                <p>Slide to see the transformation</p>
               </div>
             </div>
           ))}
