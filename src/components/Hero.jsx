@@ -40,10 +40,8 @@ const Hero = () => {
       </div>
       
       <div className="hero-collage">
-        <img src="/collage_1.jpg" alt="Dental clinic interior" className="collage-img img-1" />
-        <img src="/collage_2.jpg" alt="Happy patient smiling" className="collage-img img-2" />
-        <img src="/collage_3.jpg" alt="Dentist working" className="collage-img img-3" />
-        <img src="/collage_4.jpg" alt="Dental tools" className="collage-img img-4" />
+        <img src="/hero_ba_1.jpg" alt="Patient before and after" className="collage-img img-1" />
+        <img src="/hero_ba_2.png" alt="Teeth whitening before and after" className="collage-img img-2" />
       </div>
     </section>
   );
