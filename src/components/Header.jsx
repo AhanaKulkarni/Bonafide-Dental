@@ -24,9 +24,10 @@ const Header = () => {
         
         <nav className="nav-links">
           <a href="#about">About</a>
-          <a href="#services">Services</a>
+          <a href="#services">Services <i className="fa-solid fa-chevron-down" style={{fontSize: '0.7rem', marginLeft: '4px'}}></i></a>
+          <a href="#gallery">Smile Gallery</a>
           <a href="#contact">Contact</a>
-          <a href="#book">Book</a>
+          <a href="#book">Book Appointment</a>
         </nav>
         
         <a href="https://wa.me/918097140166" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
