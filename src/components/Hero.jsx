@@ -3,26 +3,7 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero container section" id="home" style={{ position: 'relative', overflow: 'hidden' }}>
-      {/* Professional Background Graphic */}
-      <div className="hero-bg-graphic">
-        <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="var(--color-primary-light)" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-            </linearGradient>
-            <pattern id="gridPattern" width="8" height="8" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="1" fill="var(--color-primary)" opacity="0.15" />
-            </pattern>
-          </defs>
-          <rect width="100" height="100" fill="url(#heroGrad)" />
-          <rect width="100" height="100" fill="url(#gridPattern)" />
-          <circle cx="85" cy="15" r="25" fill="var(--color-primary-light)" opacity="0.4" filter="blur(6px)" />
-          <circle cx="15" cy="85" r="35" fill="var(--color-accent)" opacity="0.15" filter="blur(8px)" />
-        </svg>
-      </div>
-
+    <section className="hero container section" id="home">
       <div className="hero-content">
         <div className="badge">
           <span className="badge-dot"></span>
