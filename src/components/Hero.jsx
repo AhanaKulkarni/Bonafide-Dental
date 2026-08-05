@@ -5,6 +5,12 @@ import heroBg from '../assets/hero_bg.jpg';
 const Hero = () => {
   return (
     <section className="hero" id="home">
+      {/* Background Image Container spanning to right edge */}
+      <div className="hero-image-container">
+        <img src={heroBg} alt="Bonafide Dental Clinic" className="hero-img" />
+        <div className="hero-image-overlay"></div>
+      </div>
+
       <div className="hero-grid container">
         <div className="hero-content">
           <div className="badge">
@@ -54,11 +60,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="hero-image-container">
-          <img src={heroBg} alt="Bonafide Dental Clinic" className="hero-img" />
-          <div className="hero-image-overlay"></div>
         </div>
       </div>
 
