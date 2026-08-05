@@ -4,8 +4,6 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Treatments from './components/Treatments'
 import Services from './components/Services'
-import Reviews from './components/Reviews'
-import Booking from './components/Booking'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './index.css'
@@ -32,11 +30,9 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Treatments />
         <About />
+        <Treatments />
         <Services />
-        <Reviews />
-        <Booking />
         <Contact />
       </main>
       <Footer />

@@ -3,67 +3,19 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <section className="contact container section" id="contact">
-      <div className="contact-left">
-        <h4 className="section-label">CONTACT</h4>
-        <h2 className="contact-title">We care for your teeth.</h2>
-        
-        <div className="contact-phone">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          <span>+91 8097445755</span>
-        </div>
-
-        <div className="contact-phone" style={{ marginTop: '24px', alignItems: 'flex-start' }}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginTop: '4px', flexShrink: 0 }}>
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-          <span style={{ lineHeight: '1.6', fontSize: '18px' }}>
-            G-7, Jay Guru Krupa CHS, Near Don Bosco School, Vimal Dairy Road, Kashinagar, Bhayandar East, Thane
-          </span>
-        </div>
-        
-        <div className="contact-actions">
-          <button className="btn btn-primary">
-            Call Now
-          </button>
-          <button className="btn btn-outline">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-            </svg>
-            Book on WhatsApp
-          </button>
-        </div>
-      </div>
+    <section className="contact container section" id="contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '600px', margin: '0 auto', padding: '80px 20px' }}>
+      <h4 className="section-label">CONTACT US</h4>
+      <h2 className="contact-title" style={{ marginBottom: '24px' }}>We care for your teeth.</h2>
+      <p style={{ color: 'var(--color-text-light)', marginBottom: '40px', fontSize: '1.1rem', lineHeight: '1.6' }}>
+        Reach out to us directly on WhatsApp to book an appointment, ask questions, or learn more about our treatments.
+      </p>
       
-      <div className="contact-right">
-        <div className="timings-card">
-          <div className="timings-header">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            <span className="section-label" style={{marginBottom: 0}}>CLINIC TIMINGS</span>
-          </div>
-          
-          <ul className="timings-list">
-            <li>
-              <span>Morning</span>
-              <strong>10:30 AM – 1:00 PM</strong>
-            </li>
-            <li>
-              <span>Evening</span>
-              <strong>5:30 PM – 8:30 PM</strong>
-            </li>
-            <li>
-              <span>Sunday</span>
-              <strong>By Appointment Only</strong>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <a href="https://wa.me/918097445755" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '16px 40px', borderRadius: '40px', gap: '12px' }}>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        Chat on WhatsApp
+      </a>
     </section>
   );
 };
