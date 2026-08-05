@@ -1,34 +1,16 @@
 .hero {
   padding-top: 180px;
-  padding-bottom: 160px;
+  padding-bottom: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   min-height: 80vh;
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  background-color: #faf9f6; /* Premium light beige */
   position: relative;
   width: 100%;
   max-width: 100%;
-  border-radius: 0;
-}
-
-.hero-wave {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  z-index: 1;
-}
-
-.hero-wave svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 80px;
 }
 
 .hero-content {
@@ -44,19 +26,19 @@
   font-size: 4.5rem;
   font-weight: 700;
   line-height: 1.1;
-  color: #ffffff;
+  color: var(--color-text-dark);
   margin-bottom: 24px;
   letter-spacing: -1px;
 }
 
 .hero-title em {
   font-style: italic;
-  color: #38bdf8;
+  color: var(--color-primary); /* Blue accent */
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #bae6fd;
+  color: var(--color-text-light);
   margin-bottom: 40px;
   max-width: 600px;
   line-height: 1.6;
@@ -85,7 +67,7 @@
 .stat-item strong {
   font-size: 2.5rem;
   font-family: 'Playfair Display', serif;
-  color: #ffffff;
+  color: var(--color-primary);
   line-height: 1;
 }
 
@@ -93,18 +75,18 @@
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #bae6fd;
+  color: var(--color-text-light);
   font-weight: 500;
 }
 
 .hero .badge {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(2, 132, 199, 0.05); /* Light blue accent background */
+  color: var(--color-primary);
+  border: 1px solid rgba(2, 132, 199, 0.15);
 }
 
 .hero .badge-dot {
-  background: #38bdf8;
+  background: var(--color-primary);
 }
 
 @media (max-width: 992px) {
