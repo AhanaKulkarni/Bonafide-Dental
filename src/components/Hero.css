@@ -70,19 +70,20 @@
   width: 140px;
 }
 .deco-line-left {
-  background: linear-gradient(90deg, transparent, rgba(2, 132, 199, 0.6));
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.8));
   border-radius: 0 50% 50% 0;
-  transform: rotate(-3deg);
+  transform: rotate(3deg); /* Curve UP to connect with tooth */
 }
 .deco-line-right {
-  background: linear-gradient(270deg, transparent, rgba(2, 132, 199, 0.6));
+  background: linear-gradient(270deg, transparent, rgba(37, 99, 235, 0.8));
   border-radius: 50% 0 0 50%;
-  transform: rotate(3deg);
+  transform: rotate(-3deg); /* Curve UP to connect with tooth */
 }
 .deco-icon {
-  color: var(--color-primary);
+  color: #2563eb;
   font-size: 1.2rem;
   opacity: 0.9;
+  margin: 0 -5px; /* Pull lines closer */
 }
 
 .hero-subtitle {
@@ -101,7 +102,25 @@
   margin-bottom: 50px;
 }
 
-.btn-outline-primary {
+.btn-navy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: #0f172a;
+  color: white;
+}
+.btn-navy:hover {
+  background: #1e293b;
+}
+
+.btn-outline-dark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -114,21 +133,20 @@
   transition: all 0.3s ease;
   background: white;
   color: #0f172a;
-  border: 1px solid var(--color-primary);
+  border: 1px solid #cbd5e1;
 }
-.btn-outline-primary:hover {
-  background: rgba(2, 132, 199, 0.05);
+.btn-outline-dark:hover {
+  background: #f1f5f9;
 }
 
 /* Waves */
 .hero-waves {
   position: absolute;
-  bottom: -1px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  transform: rotate(180deg);
   z-index: 1;
 }
 .hero-waves svg {
