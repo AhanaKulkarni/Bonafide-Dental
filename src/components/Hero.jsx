@@ -3,7 +3,16 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero container section" id="home">
+    <section className="hero container section" id="home" style={{ position: 'relative' }}>
+      {/* Simple Background Graphics */}
+      <div className="hero-simple-graphics">
+        <div className="graphic-circle circle-1"></div>
+        <div className="graphic-circle circle-2"></div>
+        <div className="graphic-plus plus-1">+</div>
+        <div className="graphic-plus plus-2">+</div>
+        <div className="graphic-plus plus-3">+</div>
+      </div>
+
       <div className="hero-content">
         <div className="badge">
           <span className="badge-dot"></span>
