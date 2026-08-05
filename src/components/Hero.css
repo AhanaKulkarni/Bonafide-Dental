@@ -1,10 +1,9 @@
 .hero {
   position: relative;
   background-color: #faf9f6; /* light beige */
-  background-image: radial-gradient(circle at 50% -20%, rgba(37, 99, 235, 0.05) 0%, transparent 60%);
-  padding-top: 160px;
-  padding-bottom: 80px;
-  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 220px;
+  min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,9 +139,29 @@
   background: #f1f5f9;
 }
 
+/* Waves */
+.hero-waves {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+}
+.hero-waves svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-title { font-size: 3.5rem; }
   .deco-line { width: 60px; }
   .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; }
+  .hero { padding-bottom: 120px; }
+  .hero-waves { height: 120px; }
 }
