@@ -35,13 +35,6 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Soft Blue Valley Waves at the bottom */}
-      <div className="hero-waves">
-        <svg width="100%" height="100%" viewBox="0 0 1440 250" preserveAspectRatio="none">
-          <path fill="#e0f2fe" d="M0,0 Q720,250 1440,0 V250 H0 Z" opacity="0.5" />
-          <path fill="#bae6fd" d="M0,50 Q720,280 1440,50 V250 H0 Z" opacity="0.6" />
-          <path fill="#7dd3fc" d="M0,100 Q720,310 1440,100 V250 H0 Z" opacity="0.8" />
-        </svg>
       </div>
     </section>
   );
