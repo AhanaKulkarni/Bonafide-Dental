@@ -25,25 +25,20 @@
 
 .accent-glow {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.15;
+  top: 0;
+  height: 100%;
+  width: 25vw;
+  pointer-events: none;
 }
 
 .accent-glow-1 {
-  width: 600px;
-  height: 600px;
-  background: #2563eb;
-  top: -200px;
-  right: -100px;
+  right: 0;
+  background: linear-gradient(270deg, rgba(37, 99, 235, 0.08) 0%, transparent 100%);
 }
 
 .accent-glow-2 {
-  width: 500px;
-  height: 500px;
-  background: #38bdf8;
-  bottom: -150px;
-  left: -150px;
+  left: 0;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.08) 0%, transparent 100%);
 }
 
 .hero-content {
