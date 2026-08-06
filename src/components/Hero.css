@@ -33,12 +33,12 @@
 
 .accent-glow-1 {
   right: 0;
-  background: linear-gradient(270deg, rgba(37, 99, 235, 0.08) 0%, transparent 100%);
+  background: linear-gradient(270deg, rgba(37, 99, 235, 0.15) 0%, transparent 100%);
 }
 
 .accent-glow-2 {
   left: 0;
-  background: linear-gradient(90deg, rgba(56, 189, 248, 0.08) 0%, transparent 100%);
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.15) 0%, transparent 100%);
 }
 
 .accent-glow-center {
