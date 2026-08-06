@@ -1,8 +1,8 @@
 .hero {
   position: relative;
-  background-color: #faf9f6; /* light beige */
-  padding-top: 140px;
-  padding-bottom: 220px;
+  background-color: #ffffff; /* pure white */
+  padding-top: 180px;
+  padding-bottom: 120px;
   min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
@@ -10,6 +10,40 @@
   justify-content: center;
   text-align: center;
   overflow: hidden;
+}
+
+.hero-bg-accents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.accent-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+}
+
+.accent-glow-1 {
+  width: 600px;
+  height: 600px;
+  background: #2563eb;
+  top: -200px;
+  right: -100px;
+}
+
+.accent-glow-2 {
+  width: 500px;
+  height: 500px;
+  background: #38bdf8;
+  bottom: -150px;
+  left: -150px;
 }
 
 .hero-content {
@@ -139,29 +173,10 @@
   background: #f1f5f9;
 }
 
-/* Waves */
-.hero-waves {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  line-height: 0;
-  z-index: 1;
-}
-.hero-waves svg {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .hero-title { font-size: 3.5rem; }
   .deco-line { width: 60px; }
   .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; }
-  .hero { padding-bottom: 120px; }
-  .hero-waves { height: 120px; }
+  .hero { padding-top: 140px; padding-bottom: 80px; }
 }
