@@ -41,6 +41,19 @@
   background: linear-gradient(90deg, rgba(56, 189, 248, 0.08) 0%, transparent 100%);
 }
 
+.accent-glow-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: rgba(37, 99, 235, 0.04);
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;

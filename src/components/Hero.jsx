@@ -7,6 +7,7 @@ const Hero = () => {
       <div className="hero-bg-accents">
         <div className="accent-glow accent-glow-1"></div>
         <div className="accent-glow accent-glow-2"></div>
+        <div className="accent-glow-center"></div>
       </div>
       
       <div className="hero-content container">
