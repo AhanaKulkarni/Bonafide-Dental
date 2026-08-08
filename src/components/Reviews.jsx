@@ -4,16 +4,28 @@ import './Reviews.css';
 const Reviews = () => {
   const reviews = [
     {
-      text: "\"Dr. Dimple is very professional and gentle. Got my root canal done completely painlessly.\"",
-      author: "Rahul M."
+      text: "\"I got my teeth scaling and cleaning done today, and the experience was excellent. The doctor was very professional and gentle. My teeth feel extremely clean, smooth, and fresh now. Highly recommended!\"",
+      author: "Vandana Rajbhar"
     },
     {
-      text: "\"Excellent clinic with all modern facilities. The staff is polite and Dr. Dimple explains everything clearly.\"",
-      author: "Sneha P."
+      text: "\"Dr. Dimple is very supportive and she has the best patience level and the services provided by her are just the bestest. She provides it at very affordable rates. Highly recommend to visit Bonafide dental.\"",
+      author: "Shweta Daware"
     },
     {
-      text: "\"Best dental experience I've had in Mumbai. Clean environment and highly experienced doctor.\"",
-      author: "Vikram S."
+      text: "\"Dr. Dimple Ma'am is very professional and caring. The treatment was smooth and painless. The clinic is clean and staff are polite. Highly recommended!\"",
+      author: "Rajkamal Saroj"
+    },
+    {
+      text: "\"Dr. Dimple was excellent! They explained everything in a clear and simple way, answered all my questions, and made sure I was comfortable. The clinic was very clean and had modern equipment.\"",
+      author: "Ajay Kalantre"
+    },
+    {
+      text: "\"Dr. Dimple provided excellent treatment to my mother, successfully extracting and fitting her teeth with a painless procedure. Her professionalism and care were truly commendable.\"",
+      author: "Amarendra Mishra"
+    },
+    {
+      text: "\"Had a severe tooth pain and I was unable to eat from that side. My friend referred me to Dr. Dimple... she did a root canal treatment for that tooth and now I am feeling better and can eat from that side.\"",
+      author: "Kajal"
     }
   ];
 
@@ -35,7 +47,7 @@ const Reviews = () => {
               ))}
             </div>
             <p className="review-text">{review.text}</p>
-            <p className="review-author">{review.author}</p>
+            <p className="review-author">- {review.author}</p>
           </div>
         ))}
       </div>

@@ -3,17 +3,23 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <section className="contact container section" id="contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '600px', margin: '0 auto', padding: '80px 20px' }}>
+    <section className="contact container section" id="contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '800px', margin: '0 auto', padding: '80px 20px' }}>
       <h4 className="section-label">CONTACT US</h4>
-      <h2 className="contact-title" style={{ marginBottom: '24px' }}>We care for your teeth.</h2>
-      <p style={{ color: 'var(--color-text-light)', marginBottom: '40px', fontSize: '1.1rem', lineHeight: '1.6' }}>
-        Reach out to us directly on WhatsApp to book an appointment, ask questions, or learn more about our treatments.
-      </p>
+      <h2 className="contact-title" style={{ marginBottom: '40px' }}>We care for your teeth.</h2>
       
-      <a href="https://wa.me/918097445755" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '16px 40px', borderRadius: '40px', gap: '12px' }}>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-        </svg>
+      <div className="contact-details" style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '48px', alignItems: 'center' }}>
+        <div className="contact-item" style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '1.2rem' }}>
+          <i className="fa-solid fa-location-dot" style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}></i>
+          <p style={{ textAlign: 'left', maxWidth: '500px', lineHeight: '1.5' }}>G-7, Jay Guru Krupa Bldg, Vimal Dairy Rd, behind ICICI Atm, near Don Bosco School, Bhayandar East, Thane, Maharashtra 401105</p>
+        </div>
+        <div className="contact-item" style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '1.2rem' }}>
+          <i className="fa-solid fa-phone" style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}></i>
+          <p>+91 80971 40166 &nbsp;/&nbsp; +91 80974 45755</p>
+        </div>
+      </div>
+      
+      <a href="https://wa.me/918097140166" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '16px 40px', borderRadius: '40px', gap: '12px' }}>
+        <i className="fa-brands fa-whatsapp" style={{ fontSize: '1.5rem' }}></i>
         Chat on WhatsApp
       </a>
     </section>
