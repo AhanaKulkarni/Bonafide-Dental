@@ -32,11 +32,8 @@ const About = () => {
         <h2 className="about-title">Dr. Dimple Rai Singh</h2>
         <p className="about-subtitle">B.D.S. · Dental Surgeon</p>
         
-        <p className="about-desc">
-          Modern dentistry delivered with warmth, precision, and calm.
-        </p>
-        <p className="about-desc" style={{ marginTop: '-8px', fontWeight: '500', color: 'var(--color-primary)' }}>
-          All treatment under one roof.
+        <p className="about-desc" style={{ lineHeight: '1.6', fontSize: '1rem', color: 'var(--color-text-light)' }}>
+          Dr. Dimple Rai is the most esteemed & renowned Dental Surgeon having experience of more than 12 Years in Dentistry. Dentist in Mira-Bhayandar, Bonafide Dental Clinic offers a comprehensive, advanced & yet affordable solution to all your dental care needs. The dental clinic is equipped with advance Technology and digital X-Ray. Bonafide Dental provides stress free dental care, maintaining the utmost quality in a relaxed atmosphere. The Clinic is located in Bhayandar (E) at a prime location Opp. Indralok Naka, has leading dental technology and products to ensure to provide our patients with the highest level of care.
         </p>
         
         <div className="features-grid">

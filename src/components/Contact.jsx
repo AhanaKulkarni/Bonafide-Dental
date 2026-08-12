@@ -14,11 +14,18 @@ const Contact = () => {
         </div>
         <div className="contact-item" style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '1.2rem' }}>
           <i className="fa-solid fa-phone" style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}></i>
-          <p>+91 80971 40166 &nbsp;/&nbsp; +91 80974 45755</p>
+          <p>+91 80974 45755</p>
+        </div>
+        <div className="contact-item" style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '1.2rem', marginTop: '8px' }}>
+          <i className="fa-regular fa-clock" style={{ color: 'var(--color-primary)', fontSize: '1.5rem' }}></i>
+          <div style={{ textAlign: 'left' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '500' }}>Mon to Sat: 5:30 PM - 8:30 PM</p>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-text-muted)' }}>Sunday: By appointment only</p>
+          </div>
         </div>
       </div>
       
-      <a href="https://wa.me/918097140166" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '16px 40px', borderRadius: '40px', gap: '12px' }}>
+      <a href="https://wa.me/918097445755" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ fontSize: '1.2rem', padding: '16px 40px', borderRadius: '40px', gap: '12px' }}>
         <i className="fa-brands fa-whatsapp" style={{ fontSize: '1.5rem' }}></i>
         Chat on WhatsApp
       </a>

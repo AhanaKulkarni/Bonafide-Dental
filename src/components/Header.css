@@ -67,7 +67,11 @@
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  .nav-links, .btn-navy {
     display: none;
+  }
+  .header-inner {
+    justify-content: center;
+    padding: 8px 16px;
   }
 }

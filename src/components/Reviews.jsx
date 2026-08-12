@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Reviews.css';
 
 const Reviews = () => {
+  const scrollRef = useRef(null);
+  
   const reviews = [
     {
       text: "\"I got my teeth scaling and cleaning done today, and the experience was excellent. The doctor was very professional and gentle. My teeth feel extremely clean, smooth, and fresh now. Highly recommended!\"",
@@ -29,6 +31,13 @@ const Reviews = () => {
     }
   ];
 
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === 'left' ? -350 : 350;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="reviews container section" id="reviews">
       <div className="reviews-header">
@@ -36,20 +45,30 @@ const Reviews = () => {
         <h2 className="reviews-title">Loved by our patients.</h2>
       </div>
       
-      <div className="reviews-grid">
-        {reviews.map((review, index) => (
-          <div className="review-card" key={index}>
-            <div className="stars">
-              {[...Array(5)].map((_, i) => (
-                <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="var(--color-primary)" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              ))}
+      <div className="reviews-slider-container">
+        <button className="slider-btn prev-btn" onClick={() => scroll('left')}>
+          <i className="fa-solid fa-chevron-left"></i>
+        </button>
+        
+        <div className="reviews-grid" ref={scrollRef}>
+          {reviews.map((review, index) => (
+            <div className="review-card" key={index}>
+              <div className="stars">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="var(--color-primary)" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <p className="review-text">{review.text}</p>
+              <p className="review-author">- {review.author}</p>
             </div>
-            <p className="review-text">{review.text}</p>
-            <p className="review-author">- {review.author}</p>
-          </div>
-        ))}
+          ))}
+        </div>
+        
+        <button className="slider-btn next-btn" onClick={() => scroll('right')}>
+          <i className="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
       
       <div className="reviews-cta">

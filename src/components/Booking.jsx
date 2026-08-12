@@ -2,159 +2,31 @@ import React, { useState } from 'react';
 import './Booking.css';
 
 const Booking = () => {
-  const treatments = [
-    "Consultation", "Root Canal Treatment", "Braces / Clear Aligners",
-    "Teeth Whitening", "Crown & Bridges", "Dentures",
-    "Tooth Extraction", "Cavity Fillings", "Dental Implants"
-  ];
-  
-  const [selected, setSelected] = useState(null);
-  const [step, setStep] = useState(1);
-  const [selectedDate, setSelectedDate] = useState(1);
-  const [selectedTime, setSelectedTime] = useState(3);
-  
-  const dates = [
-    { day: 'SUN', date: '26' },
-    { day: 'MON', date: '27' },
-    { day: 'TUE', date: '28' },
-    { day: 'WED', date: '29' },
-    { day: 'THU', date: '30' },
-    { day: 'FRI', date: '31' },
-    { day: 'SAT', date: '1' }
-  ];
+  const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
 
-  const times = ["10:30 AM", "11:30 AM", "12:30 PM", "05:30 PM", "06:30 PM", "07:30 PM"];
-
-  const handleNext = (nextStep) => {
-    setStep(nextStep);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.open("https://wa.me/918097140166?text=Hi%20Bonafide%20Dental,%20I'd%20like%20to%20book%20a%20consultation.", "_blank");
+    const text = `Hi Bonafide Dental, I'd like to book an appointment.\nName: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
+    window.open(`https://wa.me/918097445755?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (
     <section className="booking container section" id="book">
-      <div className="booking-wrapper">
-        <div className="booking-sidebar">
-          <h4 className="section-label-light">BOOKING</h4>
-          <h2 className="booking-title">Book an appointment.</h2>
-          <p className="booking-subtitle">Four quick steps. Sent to us on WhatsApp.</p>
-          
-          <ul className="booking-steps">
-            <li className={`step ${step >= 1 ? 'active' : ''}`}>
-              <span className="step-num">1</span>
-              Treatment
-            </li>
-            <li className={`step ${step >= 2 ? 'active' : ''}`}>
-              <span className="step-num">2</span>
-              Date
-            </li>
-            <li className={`step ${step >= 3 ? 'active' : ''}`}>
-              <span className="step-num">3</span>
-              Time
-            </li>
-            <li className={`step ${step >= 4 ? 'active' : ''}`}>
-              <span className="step-num">4</span>
-              Details
-            </li>
-          </ul>
-        </div>
+      <div className="booking-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+        <h4 className="section-label-light" style={{ color: 'var(--color-primary)' }}>BOOKING</h4>
+        <h2 className="booking-title" style={{ color: '#000', marginBottom: '16px' }}>Book an appointment.</h2>
+        <p className="booking-subtitle" style={{ color: 'var(--color-text-light)', marginBottom: '32px' }}>Fill out the details below and we will contact you shortly.</p>
         
-        <div className="booking-content">
-          {step === 1 && (
-            <div className="step-container">
-              <h4 className="section-label">STEP 1</h4>
-              <h2 className="step-title">Select treatment</h2>
-              
-              <div className="treatments-grid">
-                {treatments.map((treatment, idx) => (
-                  <button 
-                    key={idx} 
-                    className={`treatment-btn ${selected === idx ? 'selected' : ''}`}
-                    onClick={() => {
-                      setSelected(idx);
-                      setTimeout(() => handleNext(2), 300);
-                    }}
-                  >
-                    {treatment}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {step === 2 && (
-            <div className="step-container fade-in">
-              <h4 className="section-label">STEP 2</h4>
-              <h2 className="step-title">Choose a date</h2>
-              
-              <div className="dates-row">
-                {dates.map((d, idx) => (
-                  <button 
-                    key={idx} 
-                    className={`date-circle ${selectedDate === idx ? 'selected' : ''}`}
-                    onClick={() => {
-                      setSelectedDate(idx);
-                      setTimeout(() => handleNext(3), 300);
-                    }}
-                  >
-                    <span className="date-day">{d.day}</span>
-                    <span className="date-num">{d.date}</span>
-                  </button>
-                ))}
-              </div>
-              
-              <button className="back-btn" onClick={() => setStep(1)}>
-                &larr; Back
-              </button>
-            </div>
-          )}
-
-          {step === 3 && (
-            <div className="step-container fade-in">
-              <h4 className="section-label">STEP 3</h4>
-              <h2 className="step-title">Pick a time</h2>
-              
-              <div className="times-grid">
-                {times.map((time, idx) => (
-                  <button 
-                    key={idx} 
-                    className={`time-btn ${selectedTime === idx ? 'selected' : ''}`}
-                    onClick={() => {
-                      setSelectedTime(idx);
-                      setTimeout(() => handleNext(4), 300);
-                    }}
-                  >
-                    {time}
-                  </button>
-                ))}
-              </div>
-              
-              <button className="back-btn" onClick={() => setStep(2)}>
-                &larr; Back
-              </button>
-            </div>
-          )}
-
-          {step === 4 && (
-            <div className="step-container fade-in">
-              <h4 className="section-label">STEP 4</h4>
-              <h2 className="step-title">Your details</h2>
-              
-              <form className="details-form" onSubmit={handleSubmit}>
-                <input type="text" placeholder="Name" defaultValue="Ahana" className="form-input" />
-                <input type="tel" placeholder="Phone Number" defaultValue="8928352406" className="form-input" />
-                <button type="submit" className="submit-btn">Submit</button>
-              </form>
-              
-              <button className="back-btn" onClick={() => setStep(3)}>
-                &larr; Back
-              </button>
-            </div>
-          )}
-        </div>
+        <form className="details-form" onSubmit={handleSubmit} style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <input type="text" name="name" placeholder="Full Name" required value={formData.name} onChange={handleChange} className="form-input" style={{ width: '100%', padding: '16px', borderRadius: '12px', border: '1px solid #ccc', fontSize: '1rem' }} />
+          <input type="tel" name="phone" placeholder="Phone Number" required value={formData.phone} onChange={handleChange} className="form-input" style={{ width: '100%', padding: '16px', borderRadius: '12px', border: '1px solid #ccc', fontSize: '1rem' }} />
+          <textarea name="message" placeholder="Brief Message (Optional)" value={formData.message} onChange={handleChange} className="form-input" style={{ width: '100%', padding: '16px', borderRadius: '12px', border: '1px solid #ccc', fontSize: '1rem', minHeight: '100px', resize: 'vertical' }}></textarea>
+          <button type="submit" className="submit-btn" style={{ width: '100%', padding: '16px', borderRadius: '40px', background: 'var(--color-primary)', color: 'white', border: 'none', fontSize: '1.1rem', fontWeight: '600', cursor: 'pointer', marginTop: '8px' }}>Send Booking Request</button>
+        </form>
       </div>
     </section>
   );
