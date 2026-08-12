@@ -23,7 +23,9 @@ const Contact = () => {
             <i className="fa-solid fa-phone"></i>
           </div>
           <h3>Call Us</h3>
-          <p>+91 80974 45755</p>
+          <p>
+            <a href="tel:+918097445755" style={{ color: 'inherit', textDecoration: 'none' }}>+91 80974 45755</a>
+          </p>
         </div>
 
         <div className="contact-card">
