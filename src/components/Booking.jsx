@@ -16,7 +16,7 @@ const Booking = () => {
 
   return (
     <section className="booking container section" id="book">
-      <div className="booking-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+      <div className="booking-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', maxWidth: '600px', margin: '0 auto', padding: '64px 32px' }}>
         <h4 className="section-label-light" style={{ color: 'var(--color-primary)' }}>BOOKING</h4>
         <h2 className="booking-title" style={{ color: '#000', marginBottom: '16px' }}>Book an appointment.</h2>
         <p className="booking-subtitle" style={{ color: 'var(--color-text-light)', marginBottom: '32px' }}>Fill out the details below and we will contact you shortly.</p>
