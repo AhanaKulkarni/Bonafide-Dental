@@ -35,6 +35,10 @@
   box-sizing: border-box;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--color-primary);

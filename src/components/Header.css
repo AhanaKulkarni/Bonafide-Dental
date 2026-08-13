@@ -68,7 +68,7 @@
 
 @media (max-width: 768px) {
   .nav-links, .btn-navy {
-    display: none;
+    display: none !important;
   }
   .header-inner {
     justify-content: center;
