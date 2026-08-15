@@ -80,8 +80,8 @@
   }
   .logo-image {
     height: 72px; /* Revert size */
-    clip-path: inset(0 0 28% 0); /* Crop the bottom text */
-    margin-bottom: -20px; /* Pull up to remove empty space */
+    clip-path: inset(0 0 15% 0); /* Crop only the bottom tagline, preserve Dental Clinic */
+    margin-bottom: -10px; /* Adjust spacing for the smaller crop */
   }
   .logo-tagline-mobile {
     display: block;
