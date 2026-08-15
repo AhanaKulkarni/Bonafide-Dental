@@ -75,6 +75,6 @@
     padding: 12px 16px;
   }
   .logo-image {
-    height: 72px; /* Made the logo noticeably larger on mobile */
+    height: 96px; /* Increased further to make the tiny tagline legible */
   }
 }
