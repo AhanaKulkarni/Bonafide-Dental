@@ -66,6 +66,10 @@
   color: var(--color-primary);
 }
 
+.logo-tagline-mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .nav-links, .btn-navy {
     display: none !important;
@@ -75,6 +79,15 @@
     padding: 12px 16px;
   }
   .logo-image {
-    height: 96px; /* Increased further to make the tiny tagline legible */
+    height: 72px; /* Revert size */
+    clip-path: inset(0 0 28% 0); /* Crop the bottom text */
+    margin-bottom: -20px; /* Pull up to remove empty space */
+  }
+  .logo-tagline-mobile {
+    display: block;
+    font-size: 11px;
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    font-weight: 500;
   }
 }

@@ -17,8 +17,9 @@ const Header = () => {
       <div className="header container">
         <div className="header-inner">
         <div className="logo">
-          <a href="/">
+          <a href="/" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none' }}>
             <img src="/logo.png" alt="Bonafide Dental Clinic" className="logo-image" />
+            <span className="logo-tagline-mobile">We care for your teeth.</span>
           </a>
         </div>
         
